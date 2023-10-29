@@ -37,7 +37,7 @@ enum {
  * Colors were lifted from
  * https://comp.sys.apple2.narkive.com/lTSrj2ZI/apple-ii-colour-rgb
  */
-#define HI_RGB(r,g,b)	(0xff000000 | ((r) << 16) | ((g) << 8) | (b))
+#define HI_RGB(r,g,b)	(0xff000000 | ((b) << 16) | ((g) << 8) | (r))
 static const uint32_t lores_colors[] = {
 	[0x0] = HI_RGB(0x00, 0x00, 0x00),	// black
 	[0x1] = HI_RGB(0xe3, 0x1e, 0x60),	// magenta
@@ -72,10 +72,10 @@ static const uint32_t hires_colors[] = {
 	C_GREEN,
 	C_GREEN,
 	C_PURPLE,
-	C_ORANGE,
-	C_BLUE,
 	C_BLUE,
 	C_ORANGE,
+	C_ORANGE,
+	C_BLUEE,
 	C_WHITE,
 };
 
@@ -101,7 +101,7 @@ static const uint32_t dhires_colors[] = {
 static const uint32_t mono[3][2] = {
 	{ 0xff000000, C_WHITE },
 	{ 0xff000000, C_GREEN },
-	{ 0xff000000, HI_RGB(0x14, 0xcf, 0xfd) },
+	{ 0xff000000, HI_RGB(0xfd, 0xcf, 0x14) },
 };
 
 
